@@ -1,0 +1,13 @@
+config:
+  target: 'https://lionfish-app-c9ayl.ondigitalocean.app/'
+  phases:
+    - duration: 1
+      arrivalRate: 1500
+      maxVusers: 1500
+      name: Test Rate limiting
+
+scenarios:
+  - name: Get Products
+    flow:
+      - get:
+          url: '/products'
